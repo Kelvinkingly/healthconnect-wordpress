@@ -1,7 +1,7 @@
 <?php
 if (!defined('ABSPATH')) { exit; }
 add_action('after_setup_theme', function () { add_theme_support('title-tag'); add_theme_support('post-thumbnails'); add_theme_support('automatic-feed-links'); });
-add_action('wp_enqueue_scripts', function () { wp_enqueue_style('healthconnect', get_stylesheet_uri(), array(), '1.0.0'); wp_enqueue_script('healthconnect', get_template_directory_uri().'/app.js', array(), '1.0.0', true); });
+add_action('wp_enqueue_scripts', function () { wp_enqueue_style('healthconnect', get_stylesheet_uri(), array(), '2.0.1'); wp_enqueue_style('healthconnect-premium', get_template_directory_uri().'/premium.css', array('healthconnect'), '2.0.1'); wp_enqueue_style('healthconnect-polish', get_template_directory_uri().'/polish.css', array('healthconnect-premium'), '2.0.1'); wp_enqueue_script('healthconnect', get_template_directory_uri().'/app.js', array(), '2.0.1', true); });
 add_action('init', function () {
     foreach (array('hc_provider'=>'Providers','hc_clinic'=>'Clinics','hc_service'=>'Services') as $type=>$label) {
         register_post_type($type, array('label'=>$label,'public'=>true,'show_in_rest'=>true,'has_archive'=>true,'supports'=>array('title','editor','excerpt','thumbnail'),'menu_icon'=>'dashicons-heart'));

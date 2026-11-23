@@ -1,4 +1,7 @@
 'use strict';
+const menuToggle=document.querySelector('.menu-toggle'), primaryNav=document.querySelector('#primary-nav');
+menuToggle?.addEventListener('click',()=>{const open=primaryNav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));});
+primaryNav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{primaryNav.classList.remove('open');menuToggle?.setAttribute('aria-expanded','false');}));
 document.querySelectorAll('[data-filter]').forEach(input=>{
  const key=input.dataset.filter, directory=document.querySelector(`[data-directory="${key}"]`), count=document.querySelector(`[data-count="${key}"]`);
  const update=()=>{const terms=input.value.trim().toLowerCase().split(/\s+/);let n=0;directory.querySelectorAll('.searchable').forEach(card=>{const match=terms.every(t=>card.dataset.search.toLowerCase().includes(t));card.hidden=!match;if(match)n++;});count.textContent=`${n} matching ${n===1?'result':'results'}`;};
