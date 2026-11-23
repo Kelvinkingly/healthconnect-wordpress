@@ -1,5 +1,9 @@
 # HealthConnect — WordPress healthcare portfolio project
 
+[![healthconnect homepage](https://raw.githubusercontent.com/Kelvinkingly/Kelvinkingly/main/assets/healthconnect-homepage.jpg)](https://healthconnect-knowedge.infinityfreeapp.com/)
+
+**[Visit the live website](https://healthconnect-knowedge.infinityfreeapp.com/)**
+
 **KnowEdge Business Development Services Ltd · Kelvinking Olupitan Omoregie**
 
 HealthConnect is an independently developed healthcare web platform designed around real-world patient access and administrative needs. It is a KnowEdge portfolio project, not a commissioned client engagement. It showcases a patient-centered site structure, searchable directories and maintainable WordPress content. No real patient data, clinical services or appointments are involved.
